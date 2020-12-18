@@ -18,7 +18,7 @@ model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_trai
 Hyperparameter tuning is done by building a hyperdrive service using Jupyter notebook.First I initialize the azure machine learning workspace, then created a compute cluster to run the experiments on and check for existing cluster. Now the existing cluster is found so  it was used instead of creating a new cluster.For this Logistic Regression algorithm was used.
 The sampling method I used is RandomSampling.It supports early termination of low-performance runs.For this a scikit-learn estimator for the training script and a HyperDriveConfig was created.The best saved model provided the accuracy of 0.9132793820121391.
 
-![Image](C:\Users\priyanka umre\Pictures\Screenshots)
+![Screenshot (309)](https://user-images.githubusercontent.com/75804779/102646554-3ecf5700-418a-11eb-8356-25d1c28861a6.png)
 
 ## Benefits of parameter sampler
 The sampling method I used is RandomSampling.The advantage of using this is that it helps to avoid bias.It also helps in choosing the best hyperparameters and optimize for speed versus accuracy. It supports both discrete and continuous values. It supports early termination of low-performance runs. In Random Sampling, the values are selected randomly from a defined search space.
