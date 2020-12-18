@@ -29,36 +29,9 @@ With the help of Early Termination policy, we can terminate poorly performing ru
 ## AutoML
 The best model obtained through AutoML is VotingEnsemble.Accuracy of this is 0.9170.
 The iterations of pipelines are as follows.
-****************************************************************************************************
-ITERATION   PIPELINE                                       DURATION      METRIC      BEST
-         0   MaxAbsScaler LightGBM                          0:00:55       0.9153    0.9153
-         1   MaxAbsScaler XGBoostClassifier                 0:01:06       0.9151    0.9153
-         2   MaxAbsScaler RandomForest                      0:00:49       0.8942    0.9153
-         3   MaxAbsScaler RandomForest                      0:00:53       0.8880    0.9153
-         4   MaxAbsScaler RandomForest                      0:00:49       0.8130    0.9153
-         5   MaxAbsScaler RandomForest                      0:00:53       0.7548    0.9153
-         6   SparseNormalizer XGBoostClassifier             0:01:11       0.9129    0.9153
-         7   MaxAbsScaler GradientBoosting                  0:00:55       0.9039    0.9153
-         8   StandardScalerWrapper RandomForest             0:00:49       0.9005    0.9153
-         9   MaxAbsScaler LogisticRegression                0:00:57       0.9086    0.9153
-        10   MaxAbsScaler ExtremeRandomTrees                0:02:27       0.8880    0.9153
-        11   SparseNormalizer XGBoostClassifier             0:01:11       0.9122    0.9153
-        12   MaxAbsScaler LightGBM                          0:00:50       0.8924    0.9153
-        13   MaxAbsScaler LightGBM                          0:01:04       0.9045    0.9153
-        14   SparseNormalizer XGBoostClassifier             0:02:13       0.9140    0.9153
-        15   StandardScalerWrapper LightGBM                 0:00:53       0.8953    0.9153
-        16   StandardScalerWrapper RandomForest             0:01:14       0.8880    0.9153
-        17   StandardScalerWrapper LightGBM                 0:00:55       0.8880    0.9153
-        18   StandardScalerWrapper ExtremeRandomTrees       0:01:01       0.8880    0.9153
-        19   StandardScalerWrapper LightGBM                 0:00:45       0.9073    0.9153
-        20   SparseNormalizer XGBoostClassifier             0:00:52       0.9114    0.9153
-        21   MaxAbsScaler LightGBM                          0:00:50       0.8884    0.9153
-        22   SparseNormalizer LightGBM                      0:00:55       0.9065    0.9153
-        23    VotingEnsemble                                0:01:27       0.9170    0.9170
-        24    StackEnsemble                                 0:01:38       0.9148    0.9170
-****************************************************************************************************
+![Screenshot (312)](https://user-images.githubusercontent.com/75804779/102646873-ce750580-418a-11eb-9c65-e44da98d029d.png)
 
-![Image](C:\Users\priyanka umre\Pictures\Screenshots)
+![Screenshot (310)](https://user-images.githubusercontent.com/75804779/102646863-ca48e800-418a-11eb-88ec-c3ee84835147.png)
 
 ## Pipeline comparison
 The accuracy obatined through hyperdrive run is 0.9132793820121391 whereas the accuracy obtained through AutoML is 0.9170 by VotingEnsemble.The hyperdrive used logistic regression algorithm and provide its accuracy while the AutoML used several learning algorithms to obtain its accuracy.In hyperparameter tuning we are able to use only one algorithm whereas in AutoML, different models were used. As of result of this, we were able to choose the best performing model instead of sticking to just one type.Hence we are getting better accuracy in case of AutoML.
