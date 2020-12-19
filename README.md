@@ -47,48 +47,16 @@ The iterations of pipelines are as follows.
 
 ![Screenshot (309)](https://user-images.githubusercontent.com/75804779/102646554-3ecf5700-418a-11eb-8356-25d1c28861a6.png)
 
-The best run was given by:
-Run(Experiment: automl_azure,
-Id: AutoML_81a035fb-8b11-43ad-ad89-2a9ad3abbd72_21,
-Type: azureml.scriptrun,
-Status: Completed)
-
-The best model was given by:
-Pipeline(memory=None,
-         steps=[('datatransformer',
-                 DataTransformer(enable_dnn=None, enable_feature_sweeping=None,
-                                 feature_sweeping_config=None,
-                                 feature_sweeping_timeout=None,
-                                 featurization_config=None, force_text_dnn=None,
-                                 is_cross_validation=None,
-                                 is_onnx_compatible=None, logger=None,
-                                 observer=None, task=None, working_dir=None)),
-                ('prefittedsoftvotingclassifier',...
-                                                                                                    min_samples_split=0.2442105263157895,
-                                                                                                    min_weight_fraction_leaf=0.0,
-                                                                                                    n_estimators=10,
-                                                                                                    n_jobs=1,
-                                                                                                    oob_score=False,
-                                                                                                    random_state=None,
-                                                                                                    verbose=0,
-                                                                                                    warm_start=False))],
-                                                                     verbose=False))],
-                                               flatten_transform=None,
-                                               weights=[0.18181818181818182,
-                                                        0.09090909090909091,
-                                                        0.09090909090909091,
-                                                        0.18181818181818182,
-                                                        0.09090909090909091,
-                                                        0.09090909090909091,
-                                                        0.09090909090909091,
-                                                        0.18181818181818182]))],
-         verbose=False)
-Y_transformer(['LabelEncoder', LabelEncoder()])
+The best run and best model are given by:
+![Screenshot (323)](https://user-images.githubusercontent.com/75804779/102683718-074bc380-41f9-11eb-937d-3f7e8910ce10.png)
 
 ## Pipeline comparison
 The accuracy obatined through hyperdrive run is 0.9132793820121391 whereas the accuracy obtained through AutoML is 0.9170 by VotingEnsemble.The hyperdrive used logistic regression algorithm and provide its accuracy while the AutoML used several learning algorithms to obtain its accuracy.In hyperparameter tuning we are able to use only one algorithm whereas in AutoML, different models were used. As of result of this, we were able to choose the best performing model instead of sticking to just one type.Hence we are getting better accuracy in case of AutoML.Also, the time taken by hyperdrive model was 931.1sec and that by AutoML was 3309.2 sec.
 
 ## Removal of Compute Cluster
+![Screenshot (320)](https://user-images.githubusercontent.com/75804779/102683719-0d41a480-41f9-11eb-9a26-3e94e4c06c32.png)
+
+![Screenshot (321)](https://user-images.githubusercontent.com/75804779/102683724-13378580-41f9-11eb-9398-1f70055f2dd0.png)
 
 ## Future work
 Some of the imporvements that can be done in this are:
